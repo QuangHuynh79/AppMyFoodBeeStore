@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "643654470241",
+    "project_id": "my-food-bee-store",
+    "storage_bucket": "my-food-bee-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643654470241:android:5b8e8ffc417b7fba82f820",
+        "android_client_info": {
+          "package_name": "com.example.myfoodbeestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643654470241-f0f2uqpes95motemk5rvm3ktj522la5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8QWQt_hGwhhurI3Frq7hnQ6_e4JX4u0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643654470241-f0f2uqpes95motemk5rvm3ktj522la5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
