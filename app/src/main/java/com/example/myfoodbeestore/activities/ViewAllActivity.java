@@ -40,6 +40,13 @@ public class ViewAllActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
 
