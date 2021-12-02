@@ -1,11 +1,15 @@
 package com.example.myfoodbeestore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.myfoodbeestore.activities.LoginActivity;
 import com.example.myfoodbeestore.models.UserModel;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseDatabase database;
+    Button btn_out;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -46,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
+
+        btn_out = findViewById(R.id.btn_out);
+        btn_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                signOutUser();
+            }
+        });
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -82,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+    private void signOutUser() {
+        Toast.makeText(MainActivity.this, "Thoát Thành Công", Toast.LENGTH_SHORT).show();
+        Intent mainActivity = new Intent(MainActivity.this, LoginActivity.class);
+        mainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainActivity);
+        finish();
     }
 
     @Override
