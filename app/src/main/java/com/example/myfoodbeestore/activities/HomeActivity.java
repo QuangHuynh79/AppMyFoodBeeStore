@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
             startActivity(new Intent(HomeActivity.this, MainActivity.class));
             Toast.makeText(this, "please wait you are already logged in", Toast.LENGTH_SHORT).show();
-            finish();/
+            finish();
         }
     }
 
