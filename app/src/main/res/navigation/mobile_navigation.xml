@@ -39,7 +39,7 @@
         tools:layout="@layout/fragment_my_orders" />
     <fragment
         android:id="@+id/nav_new_products"
-        android:name="com.example.myfoodbeestore.NewProductsFragment"
+        android:name="com.example.myfoodbeestore.PaymentsFragment"
         android:label="@string/new_products"
-        tools:layout="@layout/fragment_new_products" />
+        tools:layout="@layout/fragment_payments" />
 </navigation>
